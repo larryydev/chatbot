@@ -1,6 +1,5 @@
 import datetime
 
-import jwt
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -40,14 +39,6 @@ def login_route():
 
 
     resp, status_code = auth.login(email=email, password=password)
-
-    if status_code == 200:
-        token = jwt.encode({
-            'email': email,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
-        }, app.config['SECRET_KEY'], algorithm='HS256')
-        
-        resp['token'] = token
 
     return jsonify(resp), status_code
     

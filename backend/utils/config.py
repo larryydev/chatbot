@@ -11,7 +11,6 @@ DATABASE = os.path.join(DATABASE_DIR, 'database.db')
 
 
 # !!!! UPDATE THE FOLLOWING
-
 OPEN_AI_API_KEY = None
 
 
@@ -19,4 +18,3 @@ OPEN_AI_API_KEY = None
 # you need to setup "APP PASSWORD" in your google account
 EMAIL_SENDER = None
 EMAIL_PWD = None
-
